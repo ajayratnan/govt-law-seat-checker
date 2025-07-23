@@ -54,6 +54,24 @@ const seatData = {
   },
 };
 
+// Friendly labels mapping
+const categoryLabels = {
+  "State Merit": "State Merit",
+  SC: "Scheduled Castes (SC)",
+  ST: "Scheduled Tribes (ST)",
+  "Ezhava (EZ)": "Ezhava (EZ)",
+  "Muslim (MU)": "Muslim (MU)",
+  OBH: "Other Backward Hindu (OBH)",
+  "LC/AI": "Latin Catholic / Anglo‑Indian (LC/AI)",
+  Dheevara: "Dheevara (DV)",
+  Viswakarma: "Viswakarma (VI)",
+  Kusavan: "Kusavan (KN)",
+  OBX: "Other Backward Christian (OBX)",
+  Kudumbi: "Kudumbi (KU)",
+  PD: "Persons with Disabilities (PD)",
+  EWS: "Economically Weaker Sections (EWS)",
+};
+
 export default function GovtLawCollegeSeatPredictor() {
   const [program, setProgram] = useState("3yr");
   const [category, setCategory] = useState("State Merit");
@@ -104,7 +122,7 @@ export default function GovtLawCollegeSeatPredictor() {
             </h3>
             <p className="mb-6 text-sm leading-relaxed text-gray-700">
               This tool is only a <strong>predictor</strong> based on 2025 seat
-              data. Actual allotment depends on the Commissioner for Entrance
+              data (Based on final rank lists & category lists). Actual allotment depends on the Commissioner for Entrance
               Examinations (CEE) live rank lists, traveller rotation, and other
               official criteria. <br />It <strong>does not guarantee</strong> a
               Government law‑college seat.
