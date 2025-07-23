@@ -119,11 +119,17 @@ export default function GovtLawCollegeSeatPredictor() {
           <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-lg">
             <h3 className="mb-4 text-lg font-semibold text-gray-800">Disclaimer</h3>
             <p className="mb-6 text-sm leading-relaxed text-gray-700">
-              This tool is only a <strong>predictor</strong> based on 2025 seat
-              data. Actual allotment depends on the Commissioner for Entrance
-              Examinations (CEE) live rank lists and other official criteria.
-              It <strong>does not guarantee</strong> a Government law‑college
-              seat.
+              This seat‑prediction tool is an <strong>experimental model</strong> built solely on the
+              final rank and category data from the 2025 admission cycle. It does <strong>not</strong> replicate
+              the real‑time procedures used by the Commissioner for Entrance Examinations (CEE)—including live
+              rank lists, traveller rotation, and other dynamic CAP criteria.<br /><br />
+            
+              • If the tool indicates you <em>may</em> get a seat, that is <strong>not a guarantee</strong> of allotment.<br />
+              • If the tool suggests you <em>may not</em> get a seat, it <strong>does not rule out</strong> the possibility that you still could.<br />
+              • Actual admission outcomes depend entirely on the official CEE process and seat availability at the time of allotment.<br /><br />
+            
+              Writsfam Private Limited and the tool’s developers accept no liability for decisions made in reliance on these predictions.
+              Always base your choices on the <strong>official notifications and rank lists issued by CEE Kerala</strong>.
             </p>
             <button
               onClick={() => setAcceptedDisclaimer(true)}
@@ -134,11 +140,6 @@ export default function GovtLawCollegeSeatPredictor() {
           </div>
         </div>
       )}
-
-      {/* ── BRANDING ─ */}
-      <div className="mb-6 flex justify-center">
-        <img src={logoSrc} alt="WRITS logo" className="h-24 w-auto select-none" />
-      </div>
 
       {/* ── BRANDING ─ */}
       <div className="mb-6 flex justify-center">
