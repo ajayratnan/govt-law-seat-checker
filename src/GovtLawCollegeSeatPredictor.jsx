@@ -127,7 +127,7 @@ export default function GovtLawCollegeSeatPredictor() {
       {/* ── PREDICTOR CARD ─ */}
       <div className="mx-auto w-full max-w-lg rounded-2xl bg-white p-8 shadow-xl ring-1 ring-gray-200">
         <h2 className="mb-8 text-center text-2xl font-semibold text-gray-800">
-          Govt. Law College Eligibility Checker – CAP 2025
+          WRITS Govt. Law College Eligibility Checker CAP 2025
         </h2>
 
         {/* ── FORM ─ */}
