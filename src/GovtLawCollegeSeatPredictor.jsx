@@ -109,60 +109,36 @@ export default function GovtLawCollegeSeatPredictor() {
     setGranted(testedRank > 0 && testedRank <= cutoff);
   };
 
-  /* ────────────────────────────────────────────────────────────────── */
-/**  UI  **/
-return (
-  <div className="min-h-screen bg-gray-100 py-12 px-4">
-    {/* ── DISCLAIMER MODAL ─ */}
-    {!acceptedDisclaimer && (
-      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-6">
-        <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-lg">
-          <h3 className="mb-4 text-lg font-semibold text-gray-800">
-            Disclaimer
-          </h3>
-
-          {/* ── UPDATED DISCLAIMER TEXT ─ */}
-          <div className="mb-6 text-sm leading-relaxed text-gray-700 space-y-3">
-            <p>
-              This seat‑prediction tool is an <strong>experimental model</strong> built solely on the
-              final rank and category data from the 2025 admission cycle. It does <strong>not</strong> replicate
-              the real‑time procedures used by the Commissioner for Entrance Examinations (CEE)—including live
-              rank lists, traveller rotation, and other dynamic CAP criteria.
+ /* ────────────────────────────────────────────────────────────────── */
+  /**  UI  **/
+  return (
+    <div className="min-h-screen bg-gray-100 py-12 px-4">
+      {/* ── DISCLAIMER MODAL ─ */}
+      {!acceptedDisclaimer && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-6">
+          <div className="w-full max-w-md rounded-xl bg-white p-6 shadow-lg">
+            <h3 className="mb-4 text-lg font-semibold text-gray-800">Disclaimer</h3>
+            <p className="mb-6 text-sm leading-relaxed text-gray-700">
+              This tool is only a <strong>predictor</strong> based on 2025 seat
+              data. Actual allotment depends on the Commissioner for Entrance
+              Examinations (CEE) live rank lists and other official criteria.
+              It <strong>does not guarantee</strong> a Government law‑college
+              seat.
             </p>
-
-            <ul className="list-disc pl-5 space-y-1">
-              <li>
-                If the tool indicates you <em>may</em> get a seat, that is <strong>not a guarantee</strong> of
-                allotment.
-              </li>
-              <li>
-                If the tool suggests you <em>may not</em> get a seat, it <strong>does not rule out</strong> the
-                possibility that you still could.
-              </li>
-              <li>
-                Actual admission outcomes depend entirely on the official CEE process and seat availability at
-                the time of allotment.
-              </li>
-            </ul>
-
-            <p>
-              Writsfam Private Limited and the tool’s developers accept no liability for decisions made in
-              reliance on these predictions. Always base your choices on the <strong>official notifications and
-              rank lists issued by CEE Kerala</strong>.
-            </p>
+            <button
+              onClick={() => setAcceptedDisclaimer(true)}
+              className="h-10 w-full rounded-md bg-red-600 text-sm font-semibold text-white transition hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+            >
+              I understand &amp; agree
+            </button>
           </div>
-
-          <button
-            onClick={() => setAcceptedDisclaimer(true)}
-            className="h-10 w-full rounded-md bg-red-600 text-sm font-semibold text-white transition hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
-          >
-            I understand &amp; agree
-          </button>
         </div>
+      )}
+
+      {/* ── BRANDING ─ */}
+      <div className="mb-6 flex justify-center">
+        <img src={logoSrc} alt="WRITS logo" className="h-24 w-auto select-none" />
       </div>
-    )}
-  </div>
-);
 
       {/* ── BRANDING ─ */}
       <div className="mb-6 flex justify-center">
